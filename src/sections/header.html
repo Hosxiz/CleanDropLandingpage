@@ -1,0 +1,146 @@
+<!-- ========================================================
+       1. NAVIGATION BAR (แถบเมนูด้านบน)
+       - มีโลโก้แบรนด์, ลิงก์นำทางไปยังส่วนต่างๆ ในหน้าเดียว, และปุ่ม CTA
+       ======================================================== -->
+<header class="site-header" id="navbar">
+  <div class="container header-container">
+    <a href="#hero" class="brand-logo" aria-label="MY PRODUCT หน้าแรก">
+      <div class="logo-icon-wrap">
+        <!-- ไอคอนหยดน้ำและใบไม้ SVG สไตล์ธรรมชาติ -->
+        <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 3C16 3 6 15 6 21C6 26.5228 10.4772 31 16 31C21.5228 31 26 26.5228 26 21C26 15 16 3 16 3Z"
+            fill="url(#water-grad)" />
+          <path
+            d="M16 11C16 11 19 16 19 19.5C19 21.9853 17.6569 24 16 24C14.3431 24 13 21.9853 13 19.5C13 16 16 11 16 11Z"
+            fill="#FFFFFF" fill-opacity="0.45" />
+          <path d="M14 28C10 26 8 22 9 17C12 19 13 24 14 28Z" fill="#3D7B54" fill-opacity="0.85" />
+          <defs>
+            <linearGradient id="water-grad" x1="16" y1="3" x2="16" y2="31" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#4E9F76" />
+              <stop offset="1" stop-color="#1C658C" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">MY</span>
+        <span class="logo-subtitle">PRODUCT</span>
+      </div>
+    </a>
+
+    <!-- เมนูนำทางแบบ Desktop พร้อมระบบ Dropdown สไตล์สี่เหลี่ยมคมชัด -->
+    <nav class="nav-menu" id="navMenu">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#features" class="nav-link">จุดเด่นเครื่อง</a>
+        </li>
+
+        <!-- Dropdown 1: เทคโนโลยี & การกรอง -->
+        <li class="nav-item has-dropdown">
+          <a href="#filter-journey" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span>เทคโนโลยีการกรอง</span>
+            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </a>
+          <div class="dropdown-panel">
+            <div class="dropdown-grid">
+              <a href="#filter-journey" class="dropdown-link-card">
+                <div class="dropdown-icon-box">01</div>
+                <div class="dropdown-info">
+                  <span class="dropdown-title">Sediment Core</span>
+                  <span class="dropdown-desc">ดักตะกอนหยาบ สนิม ทราย</span>
+                </div>
+              </a>
+              <a href="#filter-journey" class="dropdown-link-card">
+                <div class="dropdown-icon-box">02</div>
+                <div class="dropdown-info">
+                  <span class="dropdown-title">Carbon Block</span>
+                  <span class="dropdown-desc">ดูดซับคลอรีน กลิ่น สารเคมี</span>
+                </div>
+              </a>
+              <a href="#filter-journey" class="dropdown-link-card">
+                <div class="dropdown-icon-box">03</div>
+                <div class="dropdown-info">
+                  <span class="dropdown-title">RO Membrane 0.0001μm</span>
+                  <span class="dropdown-desc">สกัดโลหะหนัก & ไมโครพลาสติก</span>
+                </div>
+              </a>
+              <a href="#filter-journey" class="dropdown-link-card">
+                <div class="dropdown-icon-box">04</div>
+                <div class="dropdown-info">
+                  <span class="dropdown-title">Mineral Booster</span>
+                  <span class="dropdown-desc">คืนแร่ธาตุธรรมชาติ ปรับ pH ด่าง</span>
+                </div>
+              </a>
+              <a href="#filter-journey" class="dropdown-link-card highlight-item">
+                <div class="dropdown-icon-box">05</div>
+                <div class="dropdown-info">
+                  <span class="dropdown-title">Deep UV-C LED</span>
+                  <span class="dropdown-desc">สเตอริไลซ์ฆ่าเชื้อโรค 99.999%</span>
+                </div>
+              </a>
+              <a href="#filter-journey" class="dropdown-footer-link">
+                <span>ดูแบบจำลอง 5 ขั้นตอนแบบ Interactive &rarr;</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Dropdown 2: ประสิทธิภาพ & การเปรียบเทียบ -->
+        <li class="nav-item has-dropdown">
+          <a href="#comparison" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span>เปรียบเทียบ & ความคุ้มค่า</span>
+            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </a>
+          <div class="dropdown-panel dropdown-panel-sm">
+            <div class="dropdown-list-simple">
+              <a href="#comparison" class="dropdown-item-simple">
+
+                <div>
+                  <strong>ตารางเปรียบเทียบคุณภาพน้ำ</strong>
+                  <p>เทียบน้ำประปา vs เครื่องกรองทั่วไป vs MY PRODUCT</p>
+                </div>
+              </a>
+              <a href="#calculator" class="dropdown-item-simple">
+
+                <div>
+                  <strong>คำนวณเงินออม & ขยะพลาสติก</strong>
+                  <p>จำลองความประหยัดต่อปีตามจำนวนสมาชิกในบ้าน</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#specs" class="nav-link">สเปกตัวเครื่อง</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#faq" class="nav-link">คำถามที่พบบ่อย</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ปุ่ม Action ด้านขวาบน -->
+    <div class="header-actions">
+      <button class="btn btn-outline" id="openDemoBtn" aria-label="จองคิวนัดตรวจน้ำฟรี">
+        นัดตรวจน้ำฟรี
+      </button>
+      <a href="#specs" class="btn btn-primary" id="ctaBuyBtn">
+        ดูข้อเสนอพิเศษ
+      </a>
+      <!-- ปุ่มเปิดเมนูบนจอมือถือ (Hamburger Button) -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="เปิดเมนูบนมือถือ">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </div>
+</header>

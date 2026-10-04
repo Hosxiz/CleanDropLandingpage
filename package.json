@@ -1,0 +1,13 @@
+{
+  "name": "water-purifier-showcase",
+  "version": "1.0.0",
+  "description": "AQUAVITA Hydro-Eco Showcase",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js --watch",
+    "watch": "node build.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,102 @@
+<!-- ========================================================
+         6. INTERACTIVE ECO & SAVINGS CALCULATOR (เครื่องคำนวณความคุ้มค่า)
+         - ปรับจำนวนสมาชิกในบ้าน
+         - คำนวณเงินที่ประหยัดได้ต่อปี, จำนวนขวดพลาสติกที่ลดได้
+         ======================================================== -->
+<section class="calculator-section" id="calculator">
+  <div class="container">
+    <div class="calculator-card">
+      <div class="calc-header text-center">
+        <span class="section-eyebrow">Eco-Friendly & Smart Investment</span>
+        <h2 class="section-title">คำนวณเงินเก็บและความสุขที่คุณจะคืนให้โลก</h2>
+        <p class="section-desc">ลองเลื่อนแถบเพื่อดูว่าเมื่อเปลี่ยนจากน้ำดื่มขวดพลาสติกมาใช้ <span
+            class="text-highlight">MYPRODUCT</span> คุณจะประหยัดได้เท่าไหร่</p>
+      </div>
+
+      <div class="calc-grid">
+        <!-- ส่วนปรับค่าควบคุม (Input Controls) -->
+        <div class="calc-inputs-panel">
+          <div class="input-control-group">
+            <div class="input-label-row">
+              <label for="familyMembersRange">จำนวนสมาชิกในบ้าน (คน):</label>
+              <span class="range-display-val" id="membersDisplay">4 คน</span>
+            </div>
+            <input type="range" id="familyMembersRange" min="1" max="10" value="4" step="1" class="custom-range-slider">
+            <div class="range-scale-labels">
+              <span>1 คน</span>
+              <span>5 คน</span>
+              <span>10 คน</span>
+            </div>
+          </div>
+
+          <div class="input-control-group">
+            <div class="input-label-row">
+              <label for="waterIntakeRange">ปริมาณการดื่มเฉลี่ยต่อคนต่อวัน (ลิตร):</label>
+              <span class="range-display-val" id="intakeDisplay">2.0 ลิตร</span>
+            </div>
+            <input type="range" id="waterIntakeRange" min="1.0" max="4.0" value="2.0" step="0.5"
+              class="custom-range-slider">
+            <div class="range-scale-labels">
+              <span>1.0 ล.</span>
+              <span>2.0 ล.</span>
+              <span>4.0 ล.</span>
+            </div>
+          </div>
+
+          <div class="calc-note">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="16" x2="12" y2="12" />
+              <line x1="12" y1="8" x2="12.01" y2="8" />
+            </svg>
+            <span>คำนวณเปรียบเทียบจากค่าน้ำดื่มขวด PET มาตรฐานเฉลี่ยขวดละ 10 บาท (600 มล.)</span>
+          </div>
+        </div>
+
+        <!-- ส่วนแสดงผลลัพธ์คำนวณ (Results Display Panel) -->
+        <div class="calc-results-panel">
+          <div class="result-box main-savings">
+            <span class="result-label">ประหยัดเงินได้สูงสุดต่อปี:</span>
+            <div class="savings-amount-wrap">
+              <span class="savings-currency">฿</span>
+              <span class="savings-number" id="savingsAmount">38,900</span>
+              <span class="savings-period">/ ปี</span>
+            </div>
+            <span class="result-subtext">คืนทุนค่าเครื่องได้ภายใน 5 - 7 เดือนแรก</span>
+          </div>
+
+          <div class="eco-metrics-row">
+            <!-- ขยะขวดพลาสติกที่ลดได้ -->
+            <div class="eco-metric-card">
+              <div class="eco-icon-wrap bg-green-light">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 3h12l1 6H5l1-6z" />
+                  <path d="M5 9v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9" />
+                </svg>
+              </div>
+              <div class="eco-meta">
+                <span class="eco-val" id="bottlesReduced">4,867</span>
+                <span class="eco-text">ลดขวดพลาสติกต่อปี (ขวด)</span>
+              </div>
+            </div>
+
+            <!-- ปริมาณคาร์บอนฟุตพริ้นท์ที่ลดได้ -->
+            <div class="eco-metric-card">
+              <div class="eco-icon-wrap bg-blue-light">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                </svg>
+              </div>
+              <div class="eco-meta">
+                <span class="eco-val" id="co2Reduced">401</span>
+                <span class="eco-text">ลดการปล่อย CO₂ (กก./ปี)</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

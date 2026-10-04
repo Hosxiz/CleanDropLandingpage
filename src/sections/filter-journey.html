@@ -1,0 +1,148 @@
+    <!-- ========================================================
+         4. INTERACTIVE STEP-BY-STEP FILTER JOURNEY (แกนหลัก Interactive)
+         - สลับคลิกดูชั้นกรองทั้ง 5 ขั้นตอน
+         - แสดงแอนิเมชันน้ำเดินทาง, สิ่งที่ดักจับได้, และค่า TDS Purity Meter
+         ======================================================== -->
+    <section class="journey-section" id="filter-journey">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">นวัตกรรมการกรอง 5 ระดับ</span>
+          <h2 class="section-title">เดินทางสำรวจทุกหยดน้ำผ่าน 5 ชั้นกรองบริสุทธิ์</h2>
+          <p class="section-desc">คลิกเลือกแต่ละชั้นเพื่อดูว่าน้ำประปาทั่วไปถูกแปลงโฉมเป็นน้ำแร่บริสุทธิ์ได้อย่างไร</p>
+        </div>
+
+        <!-- แผงจำลอง Interactive Journey Panel -->
+        <div class="journey-interactive-wrapper">
+          <!-- แถบปุ่มเลือกชั้นกรอง (Step Tabs) -->
+          <div class="stage-tabs-list" id="stageTabsList" role="tablist">
+            <!-- สร้างผ่าน HTML และสามารถสลับด้วย JavaScript -->
+            <button class="stage-tab-btn active" data-stage="1" role="tab" aria-selected="true">
+              <span class="tab-index">01</span>
+              <span class="tab-title">Sediment Core</span>
+            </button>
+            <button class="stage-tab-btn" data-stage="2" role="tab" aria-selected="false">
+              <span class="tab-index">02</span>
+              <span class="tab-title">Carbon Block</span>
+            </button>
+            <button class="stage-tab-btn" data-stage="3" role="tab" aria-selected="false">
+              <span class="tab-index">03</span>
+              <span class="tab-title">RO Membrane</span>
+            </button>
+            <button class="stage-tab-btn" data-stage="4" role="tab" aria-selected="false">
+              <span class="tab-index">04</span>
+              <span class="tab-title">Mineral Boost</span>
+            </button>
+            <button class="stage-tab-btn" data-stage="5" role="tab" aria-selected="false">
+              <span class="tab-index">05</span>
+              <span class="tab-title">UV-C Sterilizer</span>
+            </button>
+          </div>
+
+          <!-- ตัวแสดงผลลัพธ์จำลอง (Stage Simulation Canvas/Card) -->
+          <div class="simulation-display-card">
+            <div class="sim-grid">
+              
+              <!-- คอลัมน์ซ้าย: กราฟิกจำลองการไหลของน้ำและการทำงานของกระบอกกรอง -->
+              <div class="sim-visual-column">
+                <div class="filter-chamber-visual">
+                  <!-- ป้ายบอกสถานะท่อน้ำเข้า -->
+                  <div class="water-input-node">
+                    <span class="node-label">ท่อน้ำเข้า: น้ำประปาดิบ</span>
+                    <div class="flow-particles input-particles">
+                      <span class="particle p-bad"></span>
+                      <span class="particle p-bad"></span>
+                      <span class="particle p-bad"></span>
+                    </div>
+                  </div>
+
+                  <!-- ภาพจำลองกระบอกไส้กรองกลาง -->
+                  <div class="cylinder-core" id="cylinderCore">
+                    <div class="cylinder-glass-glow"></div>
+                    <div class="cylinder-media-layer" id="cylinderMedia">
+                      <!-- เนื้อหาภายในจะเปลี่ยนสีและแอนิเมชันตามชั้นที่เลือกผ่าน JS -->
+                    </div>
+                    <!-- ข้อความบอกชื่อเทคโนโลยีในชั้น -->
+                    <div class="cylinder-layer-tag" id="cylinderTag">STAGE 1: SEDIMENT FILTER</div>
+                  </div>
+
+                  <!-- ท่อน้ำออก -->
+                  <div class="water-output-node">
+                    <span class="node-label">ท่อน้ำออก: น้ำแร่สดพร้อมดื่ม</span>
+                    <div class="flow-particles output-particles">
+                      <span class="particle p-good"></span>
+                      <span class="particle p-good"></span>
+                      <span class="particle p-good"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- มาตรวัดค่า TDS และความบริสุทธิ์แบบสด (Live Purity & TDS Meter) -->
+                <div class="purity-meter-box">
+                  <div class="meter-header">
+                    <span class="meter-title">ระดับสารละลายในน้ำ (TDS Level)</span>
+                    <span class="meter-val-badge" id="meterBadge">280 &rarr; 180 PPM</span>
+                  </div>
+                  <div class="meter-progress-track">
+                    <div class="meter-progress-bar" id="meterProgress" style="width: 75%;"></div>
+                  </div>
+                  <div class="meter-markers">
+                    <span>น้ำดิบ (300 PPM)</span>
+                    <span>น้ำกรองมาตรฐาน</span>
+                    <span>น้ำแร่สมดุล (15-40 PPM)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- คอลัมน์ขวา: ข้อมูลอธิบายเชิงลึกของชั้นกรองที่เลือก -->
+              <div class="sim-details-column">
+                <div class="stage-tag-badge" id="stageBadge">ชั้นที่ 1 จาก 5 ชั้นกรอง</div>
+                <h3 class="stage-headline" id="stageTitle">Dual-Density Sediment Core (5 ไมครอน)</h3>
+                <p class="stage-description" id="stageDescription">
+                  ด่านแรกสุดของการปกป้อง ออกแบบด้วยเส้นใยโพลีโพรพีลีนเกรดการแพทย์ความหนาแน่นสองชั้น 
+                  ทำหน้าที่ดักจับสารแขวนลอยขนาดใหญ่ เช่น สนิมเหล็กจากท่อส่งน้ำเก่า ตะกอนดิน ทราย และฝุ่นละออง 
+                  เพื่อยืดอายุการใช้งานของชั้นกรองขั้นสูงถัดไป
+                </p>
+
+                <!-- สิ่งที่ดักจับได้ (Target Impurities) -->
+                <div class="impurities-group">
+                  <h4 class="group-title">สารตกค้างที่สกัดกั้นได้ในชั้นนี้:</h4>
+                  <ul class="impurities-tags" id="impuritiesList">
+                    <li class="tag-item">สนิมจากท่อประปา</li>
+                    <li class="tag-item">โคลนและตะกอนแขวนลอย</li>
+                    <li class="tag-item">อนุภาคดินทราย</li>
+                    <li class="tag-item">สิ่งแปลกปลอมขนาด > 5 ไมครอน</li>
+                  </ul>
+                </div>
+
+                <!-- คุณสมบัติทางเทคนิคเฉพาะของชั้นนี้ -->
+                <div class="stage-tech-specs">
+                  <div class="tech-spec-item">
+                    <span class="spec-name">อายุการใช้งานเฉลี่ย:</span>
+                    <span class="spec-data" id="specLifespan">6 - 8 เดือน</span>
+                  </div>
+                  <div class="tech-spec-item">
+                    <span class="spec-name">ประสิทธิภาพการดักจับ:</span>
+                    <span class="spec-data" id="specEfficiency">99.2%</span>
+                  </div>
+                  <div class="tech-spec-item">
+                    <span class="spec-name">วัสดุที่ใช้:</span>
+                    <span class="spec-data" id="specMaterial">Virgin Polypropylene 100% Food-Grade</span>
+                  </div>
+                </div>
+
+                <!-- ปุ่มเปลี่ยนชั้นก่อนหน้า/ถัดไป -->
+                <div class="stage-nav-controls">
+                  <button class="btn btn-secondary btn-sm" id="prevStageBtn" disabled>
+                    &larr; ชั้นก่อนหน้า
+                  </button>
+                  <button class="btn btn-primary btn-sm" id="nextStageBtn">
+                    ชั้นถัดไป &rarr;
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

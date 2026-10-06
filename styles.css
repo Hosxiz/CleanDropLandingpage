@@ -287,6 +287,13 @@ button {
   gap: 12px;
 }
 
+.logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .logo-icon-wrap {
   width: 36px;
   height: 36px;

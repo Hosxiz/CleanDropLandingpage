@@ -29,300 +29,231 @@
        1. NAVIGATION BAR (แถบเมนูด้านบน)
        - มีโลโก้แบรนด์, ลิงก์นำทางไปยังส่วนต่างๆ ในหน้าเดียว, และปุ่ม CTA
        ======================================================== -->
-<header class="site-header" id="navbar">
-  <div class="container header-container">
-    <a href="#hero" class="brand-logo" aria-label="Clean Drop หน้าแรก">
-      <img src="images/logo.svg" alt="Clean Drop Logo" class="logo-img">
-    </a>
-
-    <!-- เมนูนำทางแบบ Desktop พร้อมระบบ Dropdown สไตล์สี่เหลี่ยมคมชัด -->
-    <nav class="nav-menu" id="navMenu">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a href="#features" class="nav-link">จุดเด่นเครื่อง</a>
-        </li>
-
-        <!-- Dropdown 1: เทคโนโลยี & การกรอง -->
-        <li class="nav-item has-dropdown">
-          <a href="#filter-journey" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-            <span>เทคโนโลยีการกรอง</span>
-            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2.5">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </a>
-          <div class="dropdown-panel">
-            <div class="dropdown-grid">
-              <a href="#filter-journey" class="dropdown-link-card">
-                <div class="dropdown-icon-box">01</div>
-                <div class="dropdown-info">
-                  <span class="dropdown-title">Sediment Core</span>
-                  <span class="dropdown-desc">ดักตะกอนหยาบ สนิม ทราย</span>
-                </div>
-              </a>
-              <a href="#filter-journey" class="dropdown-link-card">
-                <div class="dropdown-icon-box">02</div>
-                <div class="dropdown-info">
-                  <span class="dropdown-title">Carbon Block</span>
-                  <span class="dropdown-desc">ดูดซับคลอรีน กลิ่น สารเคมี</span>
-                </div>
-              </a>
-              <a href="#filter-journey" class="dropdown-link-card">
-                <div class="dropdown-icon-box">03</div>
-                <div class="dropdown-info">
-                  <span class="dropdown-title">RO Membrane 0.0001μm</span>
-                  <span class="dropdown-desc">สกัดโลหะหนัก & ไมโครพลาสติก</span>
-                </div>
-              </a>
-              <a href="#filter-journey" class="dropdown-link-card">
-                <div class="dropdown-icon-box">04</div>
-                <div class="dropdown-info">
-                  <span class="dropdown-title">Mineral Booster</span>
-                  <span class="dropdown-desc">คืนแร่ธาตุธรรมชาติ ปรับ pH ด่าง</span>
-                </div>
-              </a>
-              <a href="#filter-journey" class="dropdown-link-card highlight-item">
-                <div class="dropdown-icon-box">05</div>
-                <div class="dropdown-info">
-                  <span class="dropdown-title">Deep UV-C LED</span>
-                  <span class="dropdown-desc">สเตอริไลซ์ฆ่าเชื้อโรค 99.999%</span>
-                </div>
-              </a>
-              <a href="#filter-journey" class="dropdown-footer-link">
-                <span>ดูแบบจำลอง 5 ขั้นตอนแบบ Interactive &rarr;</span>
-              </a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Dropdown 2: ประสิทธิภาพ & การเปรียบเทียบ -->
-        <li class="nav-item has-dropdown">
-          <a href="#comparison" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-            <span>เปรียบเทียบ & ความคุ้มค่า</span>
-            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2.5">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </a>
-          <div class="dropdown-panel dropdown-panel-sm">
-            <div class="dropdown-list-simple">
-              <a href="#comparison" class="dropdown-item-simple">
-
-                <div>
-                  <strong>ตารางเปรียบเทียบคุณภาพน้ำ</strong>
-                  <p>เทียบน้ำประปา vs เครื่องกรองทั่วไป vs Clean Drop</p>
-                </div>
-              </a>
-              <a href="#calculator" class="dropdown-item-simple">
-
-                <div>
-                  <strong>คำนวณเงินออม & ขยะพลาสติก</strong>
-                  <p>จำลองความประหยัดต่อปีตามจำนวนสมาชิกในบ้าน</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </li>
-
-        <li class="nav-item">
-          <a href="#specs" class="nav-link">สเปกตัวเครื่อง</a>
-        </li>
-
-        <li class="nav-item">
-          <a href="#faq" class="nav-link">คำถามที่พบบ่อย</a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- ปุ่ม Action ด้านขวาบน -->
-    <div class="header-actions">
-      <button class="btn btn-outline" id="openDemoBtn" aria-label="จองคิวนัดตรวจน้ำฟรี">
-        นัดตรวจน้ำฟรี
-      </button>
-      <a href="#specs" class="btn btn-primary" id="ctaBuyBtn">
-        ดูข้อเสนอพิเศษ
+  <header class="site-header" id="navbar">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="Clean Drop หน้าแรก">
+        <img src="images/logo.svg" alt="Clean Drop Logo" class="logo-img">
       </a>
-      <!-- ปุ่มเปิดเมนูบนจอมือถือ (Hamburger Button) -->
-      <button class="mobile-toggle" id="mobileToggle" aria-label="เปิดเมนูบนมือถือ">
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-      </button>
+
+      <!-- เมนูนำทางแบบ Desktop พร้อมระบบ Dropdown สไตล์สี่เหลี่ยมคมชัด -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#features" class="nav-link">จุดเด่นเครื่อง</a>
+          </li>
+
+          <!-- Dropdown 1: เทคโนโลยี & การกรอง -->
+          <li class="nav-item has-dropdown">
+            <a href="#filter-journey" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <span>เทคโนโลยีการกรอง</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </a>
+            <div class="dropdown-panel">
+              <div class="dropdown-grid">
+                <a href="#filter-journey" class="dropdown-link-card">
+                  <div class="dropdown-icon-box">01</div>
+                  <div class="dropdown-info">
+                    <span class="dropdown-title">Sediment Core</span>
+                    <span class="dropdown-desc">ดักตะกอนหยาบ สนิม ทราย</span>
+                  </div>
+                </a>
+                <a href="#filter-journey" class="dropdown-link-card">
+                  <div class="dropdown-icon-box">02</div>
+                  <div class="dropdown-info">
+                    <span class="dropdown-title">Carbon Block</span>
+                    <span class="dropdown-desc">ดูดซับคลอรีน กลิ่น สารเคมี</span>
+                  </div>
+                </a>
+                <a href="#filter-journey" class="dropdown-link-card">
+                  <div class="dropdown-icon-box">03</div>
+                  <div class="dropdown-info">
+                    <span class="dropdown-title">RO Membrane 0.0001μm</span>
+                    <span class="dropdown-desc">สกัดโลหะหนัก & ไมโครพลาสติก</span>
+                  </div>
+                </a>
+                <a href="#filter-journey" class="dropdown-link-card">
+                  <div class="dropdown-icon-box">04</div>
+                  <div class="dropdown-info">
+                    <span class="dropdown-title">Mineral Booster</span>
+                    <span class="dropdown-desc">คืนแร่ธาตุธรรมชาติ ปรับ pH ด่าง</span>
+                  </div>
+                </a>
+                <a href="#filter-journey" class="dropdown-link-card highlight-item">
+                  <div class="dropdown-icon-box">05</div>
+                  <div class="dropdown-info">
+                    <span class="dropdown-title">Deep UV-C LED</span>
+                    <span class="dropdown-desc">สเตอริไลซ์ฆ่าเชื้อโรค 99.999%</span>
+                  </div>
+                </a>
+                <a href="#filter-journey" class="dropdown-footer-link">
+                  <span>ดูแบบจำลอง 5 ขั้นตอนแบบ Interactive &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Dropdown 2: ประสิทธิภาพ & การเปรียบเทียบ -->
+          <li class="nav-item has-dropdown">
+            <a href="#comparison" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <span>เปรียบเทียบ & ความคุ้มค่า</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </a>
+            <div class="dropdown-panel dropdown-panel-sm">
+              <div class="dropdown-list-simple">
+                <a href="#comparison" class="dropdown-item-simple">
+
+                  <div>
+                    <strong>ตารางเปรียบเทียบคุณภาพน้ำ</strong>
+                    <p>เทียบน้ำประปา vs เครื่องกรองทั่วไป vs Clean Drop</p>
+                  </div>
+                </a>
+                <a href="#calculator" class="dropdown-item-simple">
+
+                  <div>
+                    <strong>คำนวณเงินออม & ขยะพลาสติก</strong>
+                    <p>จำลองความประหยัดต่อปีตามจำนวนสมาชิกในบ้าน</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="#specs" class="nav-link">สเปกตัวเครื่อง</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#faq" class="nav-link">คำถามที่พบบ่อย</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ปุ่ม Action ด้านขวาบน -->
+      <div class="header-actions">
+        <a href="#specs" class="btn btn-primary" id="ctaBuyBtn">
+          ดูข้อเสนอพิเศษ
+        </a>
+        <!-- ปุ่มเปิดเมนูบนจอมือถือ (Hamburger Button) -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="เปิดเมนูบนมือถือ">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <main>
     <!-- ========================================================
          2. HERO SECTION (ส่วนหัวต้อนรับ & แนะนำ Flagship)
          ======================================================== -->
-<section class="hero-section" id="hero">
-  <div class="hero-bg-shapes" aria-hidden="true">
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-  </div>
-
-  <div class="container hero-container">
-    <!-- ฝั่งซ้าย: ข้อมูลนำเสนอหลัก (Value Proposition) -->
-    <div class="hero-content">
-      <div class="pill-badge">
-        <span class="pill-dot"></span>
-        <span>Flagship Innovation 2026 • ธรรมชาติผสานเทคโนโลยี</span>
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-shapes" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
       </div>
 
-      <h1 class="hero-headline">
-        น้ำดื่มบริสุทธิ์ เติมแร่ธรรมชาติ เพื่อสุขภาพทุกคนที่คุณรัก
-      </h1>
+      <div class="container hero-container">
+        <!-- ฝั่งซ้าย: ข้อมูลนำเสนอหลัก (Value Proposition) -->
+        <div class="hero-content">
+          <div class="pill-badge">
+            <span class="pill-dot"></span>
+            <span>Flagship Innovation 2026 • ธรรมชาติผสานเทคโนโลยี</span>
+          </div>
 
-      <p class="hero-description">
-        ก้าวสู่มาตรฐานใหม่ของน้ำดื่มในบ้านกับ <strong>Clean Drop</strong> ระบบกรอง 5-Stage Eco-Mineral RO
-        ที่ดักจับสารปนเปื้อน โลหะหนัก และไมโครพลาสติก 99.99% พร้อมคืนแร่ธาตุธรรมชาติ คืนความสดชื่น รสชาตินุ่มละมุน
-        ดื่มง่าย ไร้กังวล
-      </p>
+          <h1 class="hero-headline">
+            น้ำดื่มบริสุทธิ์ เติมแร่ธรรมชาติ เพื่อสุขภาพทุกคนที่คุณรัก
+          </h1>
 
-      <!-- ตัวชี้วัดสำคัญสั้นๆ (Quick Metrics) -->
-      <div class="hero-metrics">
-        <div class="metric-card">
-          <span class="metric-number">99.99%</span>
-          <span class="metric-label">ดักจับสารตกค้าง</span>
-        </div>
-        <div class="metric-divider"></div>
-        <div class="metric-card">
-          <span class="metric-number">7.8 pH</span>
-          <span class="metric-label">น้ำด่างอัลคาไลน์อ่อน</span>
-        </div>
-        <div class="metric-divider"></div>
-        <div class="metric-card">
-          <span class="metric-number">0.0001μm</span>
-          <span class="metric-label">ความละเอียด RO</span>
-        </div>
-      </div>
+          <p class="hero-description">
+            ก้าวสู่มาตรฐานใหม่ของน้ำดื่มในบ้านกับ <strong>Clean Drop</strong> ระบบกรอง 5-Stage Eco-Mineral RO
+            ที่ดักจับสารปนเปื้อน โลหะหนัก และไมโครพลาสติก 99.99% พร้อมคืนแร่ธาตุธรรมชาติ คืนความสดชื่น รสชาตินุ่มละมุน
+            ดื่มง่าย ไร้กังวล
+          </p>
 
-      <!-- ปุ่ม Call-to-action หลัก -->
-      <div class="hero-buttons">
-        <a href="#filter-journey" class="btn btn-primary btn-lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path
-              d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-          </svg>
-          สำรวจไส้กรอง 5 ชั้น
-        </a>
-        <a href="#calculator" class="btn btn-secondary btn-lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <rect x="4" y="2" width="16" height="20" rx="2" />
-            <line x1="8" y1="6" x2="16" y2="6" />
-            <line x1="16" y1="14" x2="16" y2="18" />
-            <path d="M16 10h.01" />
-            <path d="M12 10h.01" />
-            <path d="M8 10h.01" />
-            <path d="M12 14h.01" />
-            <path d="M8 14h.01" />
-            <path d="M12 18h.01" />
-            <path d="M8 18h.01" />
-          </svg>
-          คำนวณเงินที่ประหยัดได้
-        </a>
-      </div>
-
-      <!-- จุดเด่นการรับประกัน -->
-      <div class="hero-guarantee">
-        <div class="guarantee-item">
-          <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-              clip-rule="evenodd" />
-          </svg>
-          <span>เปลี่ยนไส้กรองง่ายใน 3 วินาที (Easy-Twist)</span>
-        </div>
-        <div class="guarantee-item">
-          <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-              clip-rule="evenodd" />
-          </svg>
-          <span>มาตรฐานความปลอดภัย NSF & WQA Gold Seal</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ฝั่งขวา: โมเดลแสดงภาพตัวเครื่องเครื่องกรองน้ำ (Visual Product Showcase) -->
-    <div class="hero-visual">
-      <div class="purifier-display-card">
-        <!-- ป้ายสถานะคุณภาพแบบ Live -->
-        <div class="live-status-badge">
-          <div class="pulse-indicator"></div>
-          <span>Real-Time Purity: <strong>14 PPM</strong> (น้ำแร่ดื่มได้)</span>
-        </div>
-
-        <!-- กราฟิกเครื่องกรองน้ำแบบจำลอง (Pure CSS & SVG Machine Mockup) -->
-        <div class="purifier-machine-mockup">
-          <!-- ตัวถังภายนอกสีขาวมินิมอล -->
-          <div class="machine-body">
-            <div class="machine-top-accent"></div>
-            <!-- แผงหน้าจอสัมผัส Smart Display -->
-            <div class="machine-display-screen">
-              <div class="screen-temp">24°C</div>
-              <div class="screen-mode">
-                <span class="mode-icon">💧</span>
-                <span>ECO MINERAL</span>
-              </div>
-              <div class="screen-bar-wrap">
-                <div class="screen-bar-fill"></div>
-              </div>
-              <div class="screen-stat">UV-C ACTIVE • STERILIZING</div>
+          <!-- ตัวชี้วัดสำคัญสั้นๆ (Quick Metrics) -->
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-number">99.99%</span>
+              <span class="metric-label">ดักจับสารตกค้าง</span>
             </div>
-
-            <!-- ช่องจ่ายน้ำและแก้วน้ำใส -->
-            <div class="water-dispenser-nook">
-              <div class="dispenser-nozzle">
-                <!-- ลำน้ำไหลจำลอง -->
-                <div class="stream-line"></div>
-              </div>
-              <div class="glass-cup">
-                <div class="cup-water-level"></div>
-                <div class="cup-bubbles">
-                  <span></span><span></span><span></span>
-                </div>
-              </div>
+            <div class="metric-divider"></div>
+            <div class="metric-card">
+              <span class="metric-number">7.8 pH</span>
+              <span class="metric-label">น้ำด่างอัลคาไลน์อ่อน</span>
             </div>
+            <div class="metric-divider"></div>
+            <div class="metric-card">
+              <span class="metric-number">0.0001μm</span>
+              <span class="metric-label">ความละเอียด RO</span>
+            </div>
+          </div>
 
-            <!-- ฐานรองน้ำหยด -->
-            <div class="machine-drip-tray"></div>
+          <!-- ปุ่ม Call-to-action หลัก -->
+          <div class="hero-buttons">
+            <a href="#filter-journey" class="btn btn-primary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              สำรวจไส้กรอง 5 ชั้น
+            </a>
+            <a href="#calculator" class="btn btn-secondary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2" />
+                <line x1="8" y1="6" x2="16" y2="6" />
+                <line x1="16" y1="14" x2="16" y2="18" />
+                <path d="M16 10h.01" />
+                <path d="M12 10h.01" />
+                <path d="M8 10h.01" />
+                <path d="M12 14h.01" />
+                <path d="M8 14h.01" />
+                <path d="M12 18h.01" />
+                <path d="M8 18h.01" />
+              </svg>
+              คำนวณเงินที่ประหยัดได้
+            </a>
+          </div>
+
+          <!-- จุดเด่นการรับประกัน -->
+          <div class="hero-guarantee">
+            <div class="guarantee-item">
+              <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span>เปลี่ยนไส้กรองง่ายใน 3 วินาที (Easy-Twist)</span>
+            </div>
+            <div class="guarantee-item">
+              <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span>มาตรฐานความปลอดภัย NSF & WQA Gold Seal</span>
+            </div>
+          </div>
+        </div>
+        <!-- แบนเนอร์ภาพสินค้า Clean Drop -->
+        <div class="product-showcase-banner">
+          <div class="product-banner-media">
+            <img src="images/clean-drop-product.jpg" alt="เครื่องกรองน้ำอัจฉริยะ Clean Drop Smart Purifier"
+              class="product-banner-img">
           </div>
         </div>
 
-        <!-- การ์ดฟังก์ชันลอยตัว 1 (Floating Card) -->
-        <div class="floating-spec-card card-top">
-          <div class="spec-icon-circle bg-green">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-            </svg>
-          </div>
-          <div class="spec-info">
-            <span class="spec-label">ประหยัดไฟเบอร์ 5</span>
-            <span class="spec-value">วันละไม่ถึง 1.5 บาท</span>
-          </div>
-        </div>
 
-        <!-- การ์ดฟังก์ชันลอยตัว 2 -->
-        <div class="floating-spec-card card-bottom">
-          <div class="spec-icon-circle bg-blue">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-            </svg>
-          </div>
-          <div class="spec-info">
-            <span class="spec-label">ระบบฆ่าเชื้อ UV-C</span>
-            <span class="spec-value">กำจัดเชื้อโรค 99.9%</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-        <!-- ========================================================
+    </section>
+    <!-- ========================================================
          3. HIGHLIGHT FEATURES SECTION (จุดเด่นหลัก 4 ประการ)
          ======================================================== -->
     <section class="features-section" id="features">
@@ -337,43 +268,58 @@
           <!-- การ์ด 1: Eco-Friendly -->
           <div class="feature-card">
             <div class="feature-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+              </svg>
             </div>
             <h3 class="feature-title">อัตราน้ำทิ้งต่ำพิเศษ (Low Wastewater)</h3>
-            <p class="feature-body">ระบบปั๊มอัจฉริยะปรับสมดุลแรงดัน ทำให้อัตราส่วนน้ำดีต่อน้ำทิ้งอยู่ที่ 2:1 ดีกว่าเครื่องกรอง RO ทั่วไปถึง 300% ช่วยประหยัดน้ำอย่างแท้จริง</p>
+            <p class="feature-body">ระบบปั๊มอัจฉริยะปรับสมดุลแรงดัน ทำให้อัตราส่วนน้ำดีต่อน้ำทิ้งอยู่ที่ 2:1
+              ดีกว่าเครื่องกรอง RO ทั่วไปถึง 300% ช่วยประหยัดน้ำอย่างแท้จริง</p>
           </div>
 
           <!-- การ์ด 2: Smart Mineralization -->
           <div class="feature-card">
             <div class="feature-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
             </div>
             <h3 class="feature-title">เติมแร่ธาตุธรรมชาติ (Calcium & Magnesium)</h3>
-            <p class="feature-body">ไม่สูญเสียแร่ธาตุจำเป็นต่อร่างกาย ด้วยชั้นหินแร่ธรรมชาติคัดพิเศษ รักษาสมดุลกรด-ด่าง รสชาติน้ำหวานสดชื่น ไม่ฝาดคอ เหมาะกับการชงกาแฟและปรุงอาหาร</p>
+            <p class="feature-body">ไม่สูญเสียแร่ธาตุจำเป็นต่อร่างกาย ด้วยชั้นหินแร่ธรรมชาติคัดพิเศษ รักษาสมดุลกรด-ด่าง
+              รสชาติน้ำหวานสดชื่น ไม่ฝาดคอ เหมาะกับการชงกาแฟและปรุงอาหาร</p>
           </div>
 
           <!-- การ์ด 3: Easy-Twist Replacement -->
           <div class="feature-card">
             <div class="feature-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+              </svg>
             </div>
             <h3 class="feature-title">เปลี่ยนไส้กรองได้เองใน 3 วินาที</h3>
-            <p class="feature-body">ไม่ต้องเรียกช่างให้วุ่นวาย นวัตกรรมล็อกนิรภัย Quick-Twist หมุน 90 องศาแล้วดึงออกได้ทันที พร้อมระบบตัดน้ำรั่วอัตโนมัติ 100%</p>
+            <p class="feature-body">ไม่ต้องเรียกช่างให้วุ่นวาย นวัตกรรมล็อกนิรภัย Quick-Twist หมุน 90
+              องศาแล้วดึงออกได้ทันที พร้อมระบบตัดน้ำรั่วอัตโนมัติ 100%</p>
           </div>
 
           <!-- การ์ด 4: Smart LED Monitor -->
           <div class="feature-card">
             <div class="feature-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
             </div>
             <h3 class="feature-title">จอ LED แสดงค่า TDS และอายุไส้กรอง</h3>
-            <p class="feature-body">รู้คุณภาพน้ำทุกหยดด้วยระบบตรวจวัด TDS แบบเรียลไทม์ พร้อมไฟวงแหวนอัจฉริยะแจ้งเตือนเมื่อถึงกำหนดเวลาเปลี่ยนไส้กรองล่วงหน้า</p>
+            <p class="feature-body">รู้คุณภาพน้ำทุกหยดด้วยระบบตรวจวัด TDS แบบเรียลไทม์
+              พร้อมไฟวงแหวนอัจฉริยะแจ้งเตือนเมื่อถึงกำหนดเวลาเปลี่ยนไส้กรองล่วงหน้า</p>
           </div>
         </div>
       </div>
     </section>
 
-        <!-- ========================================================
+    <!-- ========================================================
          4. INTERACTIVE STEP-BY-STEP FILTER JOURNEY (แกนหลัก Interactive)
          - สลับคลิกดูชั้นกรองทั้ง 5 ขั้นตอน
          - แสดงแอนิเมชันน้ำเดินทาง, สิ่งที่ดักจับได้, และค่า TDS Purity Meter
@@ -416,7 +362,7 @@
           <!-- ตัวแสดงผลลัพธ์จำลอง (Stage Simulation Canvas/Card) -->
           <div class="simulation-display-card">
             <div class="sim-grid">
-              
+
               <!-- คอลัมน์ซ้าย: กราฟิกจำลองการไหลของน้ำและการทำงานของกระบอกกรอง -->
               <div class="sim-visual-column">
                 <div class="filter-chamber-visual">
@@ -473,8 +419,8 @@
                 <div class="stage-tag-badge" id="stageBadge">ชั้นที่ 1 จาก 5 ชั้นกรอง</div>
                 <h3 class="stage-headline" id="stageTitle">Dual-Density Sediment Core (5 ไมครอน)</h3>
                 <p class="stage-description" id="stageDescription">
-                  ด่านแรกสุดของการปกป้อง ออกแบบด้วยเส้นใยโพลีโพรพีลีนเกรดการแพทย์ความหนาแน่นสองชั้น 
-                  ทำหน้าที่ดักจับสารแขวนลอยขนาดใหญ่ เช่น สนิมเหล็กจากท่อส่งน้ำเก่า ตะกอนดิน ทราย และฝุ่นละออง 
+                  ด่านแรกสุดของการปกป้อง ออกแบบด้วยเส้นใยโพลีโพรพีลีนเกรดการแพทย์ความหนาแน่นสองชั้น
+                  ทำหน้าที่ดักจับสารแขวนลอยขนาดใหญ่ เช่น สนิมเหล็กจากท่อส่งน้ำเก่า ตะกอนดิน ทราย และฝุ่นละออง
                   เพื่อยืดอายุการใช้งานของชั้นกรองขั้นสูงถัดไป
                 </p>
 
@@ -526,403 +472,507 @@
          5. WATER COMPARISON MATRIX SECTION (เปรียบเทียบคุณภาพน้ำ)
          - สลับเปรียบเทียบ: น้ำประปา vs เครื่องกรองทั่วไป vs AQUAVITA
          ======================================================== -->
-<section class="comparison-section" id="comparison">
-  <div class="container">
-    <div class="section-header text-center">
-      <span class="section-eyebrow">เปรียบเทียบให้เห็นชัดเจน</span>
-      <h2 class="section-title">น้ำที่คุณและครอบครัวดื่มทุกวัน สะอาดแค่ไหน?</h2>
-      <p class="section-desc">สำรวจความแตกต่างระหว่างน้ำประปา น้ำกรองแบบดั้งเดิม และน้ำแร่จาก Clean Drop</p>
-    </div>
+    <section class="comparison-section" id="comparison">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">เปรียบเทียบให้เห็นชัดเจน</span>
+          <h2 class="section-title">น้ำที่คุณและครอบครัวดื่มทุกวัน สะอาดแค่ไหน?</h2>
+          <p class="section-desc">สำรวจความแตกต่างระหว่างน้ำประปา น้ำกรองแบบดั้งเดิม และน้ำแร่จาก Clean Drop</p>
+        </div>
 
-    <div class="comparison-table-wrapper">
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th class="col-criteria">ปัจจัยคุณภาพน้ำ</th>
-            <th class="col-tap">น้ำประปาดิบ</th>
-            <th class="col-standard">เครื่องกรองทั่วไป (UF/คาร์บอน)</th>
-            <th class="col-aquavita highlighted-col">
-              <div class="table-brand-badge">แนะนำอันดับ 1</div>
-              <span>Clean Drop</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="cell-label">
-              <strong>การกรองไมโครพลาสติก & ยาฆ่าแมลง</strong>
-              <small>ขนาดเล็กกว่า 0.1 ไมครอน</small>
-            </td>
-            <td class="cell-tap"><span class="cross-mark">&#10006;</span> มีความเสี่ยงปนเปื้อนสูง</td>
-            <td class="cell-std"><span class="warn-mark">&#9888;</span> กรองได้บางส่วน (~60%)</td>
-            <td class="cell-aqua highlighted-cell"><span class="check-mark">&#10004;</span> กรองได้ 99.99% (RO 0.0001μm)
-            </td>
-          </tr>
-          <tr>
-            <td class="cell-label">
-              <strong>สารโลหะหนัก (สารตะกั่ว, แคดเมียม)</strong>
-              <small>สะสมในร่างกายระยะยาว</small>
-            </td>
-            <td class="cell-tap"><span class="cross-mark">&#10006;</span> อาจหลุดรอดจากท่อน้ำเก่า</td>
-            <td class="cell-std"><span class="warn-mark">&#9888;</span> ดักจับได้น้อย</td>
-            <td class="cell-aqua highlighted-cell"><span class="check-mark">&#10004;</span> ขจัดโลหะหนักสมบูรณ์แบบ</td>
-          </tr>
-          <tr>
-            <td class="cell-label">
-              <strong>คลอรีน กลิ่น และรสสนิม</strong>
-              <small>ผลต่อรสชาติและการดื่มน้ำ</small>
-            </td>
-            <td class="cell-tap"><span class="cross-mark">&#10006;</span> กลิ่นคลอรีนแรง ดื่มยาก</td>
-            <td class="cell-std"><span class="check-mark">&#10004;</span> กลิ่นคลอรีนลดลง</td>
-            <td class="cell-aqua highlighted-cell"><span class="check-mark">&#10004;</span> ไร้กลิ่น 100%
-              สดชื่นละมุนลิ้น</td>
-          </tr>
-          <tr>
-            <td class="cell-label">
-              <strong>แร่ธาตุธรรมชาติและค่า pH</strong>
-              <small>แคลเซียม, แมกนีเซียม, ค่าความเป็นด่าง</small>
-            </td>
-            <td class="cell-tap"><span class="warn-mark">&#9888;</span> มีแร่ธาตุปนสารตกค้าง (pH 7.0)</td>
-            <td class="cell-std"><span class="warn-mark">&#9888;</span> สภาพแร่ธาตุตามน้ำดิบ</td>
-            <td class="cell-aqua highlighted-cell"><span class="check-mark">&#10004;</span> ปรับเป็นแร่อัลคาไลน์อ่อน (pH
-              7.5-8.0)</td>
-          </tr>
-          <tr>
-            <td class="cell-label">
-              <strong>ระบบฆ่าเชื้อแบคทีเรีย/ไวรัส</strong>
-              <small>การป้องกันการย้อนกลับของเชื้อในถัง</small>
-            </td>
-            <td class="cell-tap"><span class="cross-mark">&#10006;</span> ใช้สารเคมีคลอรีนตกค้าง</td>
-            <td class="cell-std"><span class="cross-mark">&#10006;</span> ไม่มีระบบป้องกันในตัวเครื่อง</td>
-            <td class="cell-aqua highlighted-cell"><span class="check-mark">&#10004;</span> หลอด UV-C LED อัตโนมัติ 24
-              ชม.</td>
-          </tr>
-          <tr>
-            <td class="cell-label">
-              <strong>ค่าบำรุงรักษาต่อลิตร</strong>
-              <small>รวมค่าไส้กรองและน้ำ</small>
-            </td>
-            <td class="cell-tap">~0.10 บาท (ไม่ปลอดภัยต่อการดื่ม)</td>
-            <td class="cell-std">~0.95 บาท/ลิตร</td>
-            <td class="cell-aqua highlighted-cell"><strong>เพียง 0.35 บาท/ลิตร</strong></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th class="col-criteria">ปัจจัยคุณภาพน้ำ</th>
+                <th class="col-tap">น้ำประปาดิบ</th>
+                <th class="col-standard">เครื่องกรองทั่วไป (UF/คาร์บอน)</th>
+                <th class="col-aquavita highlighted-col">
+                  <div class="table-brand-badge">แนะนำอันดับ 1</div>
+                  <span>Clean Drop</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell-label">
+                  <strong>การกรองไมโครพลาสติก & ยาฆ่าแมลง</strong>
+                  <small>ขนาดเล็กกว่า 0.1 ไมครอน</small>
+                </td>
+                <td class="cell-tap"><span class="cross-mark">&#10006;</span> มีความเสี่ยงปนเปื้อนสูง</td>
+                <td class="cell-std"><span class="warn-mark">&#9888;</span> กรองได้บางส่วน (~60%)</td>
+                <td class="cell-aqua highlighted-cell"><span class="check-mark">&#10004;</span> กรองได้ 99.99% (RO
+                  0.0001μm)
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-label">
+                  <strong>สารโลหะหนัก (สารตะกั่ว, แคดเมียม)</strong>
+                  <small>สะสมในร่างกายระยะยาว</small>
+                </td>
+                <td class="cell-tap"><span class="cross-mark">&#10006;</span> อาจหลุดรอดจากท่อน้ำเก่า</td>
+                <td class="cell-std"><span class="warn-mark">&#9888;</span> ดักจับได้น้อย</td>
+                <td class="cell-aqua highlighted-cell"><span class="check-mark">&#10004;</span> ขจัดโลหะหนักสมบูรณ์แบบ
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-label">
+                  <strong>คลอรีน กลิ่น และรสสนิม</strong>
+                  <small>ผลต่อรสชาติและการดื่มน้ำ</small>
+                </td>
+                <td class="cell-tap"><span class="cross-mark">&#10006;</span> กลิ่นคลอรีนแรง ดื่มยาก</td>
+                <td class="cell-std"><span class="check-mark">&#10004;</span> กลิ่นคลอรีนลดลง</td>
+                <td class="cell-aqua highlighted-cell"><span class="check-mark">&#10004;</span> ไร้กลิ่น 100%
+                  สดชื่นละมุนลิ้น</td>
+              </tr>
+              <tr>
+                <td class="cell-label">
+                  <strong>แร่ธาตุธรรมชาติและค่า pH</strong>
+                  <small>แคลเซียม, แมกนีเซียม, ค่าความเป็นด่าง</small>
+                </td>
+                <td class="cell-tap"><span class="warn-mark">&#9888;</span> มีแร่ธาตุปนสารตกค้าง (pH 7.0)</td>
+                <td class="cell-std"><span class="warn-mark">&#9888;</span> สภาพแร่ธาตุตามน้ำดิบ</td>
+                <td class="cell-aqua highlighted-cell"><span class="check-mark">&#10004;</span> ปรับเป็นแร่อัลคาไลน์อ่อน
+                  (pH
+                  7.5-8.0)</td>
+              </tr>
+              <tr>
+                <td class="cell-label">
+                  <strong>ระบบฆ่าเชื้อแบคทีเรีย/ไวรัส</strong>
+                  <small>การป้องกันการย้อนกลับของเชื้อในถัง</small>
+                </td>
+                <td class="cell-tap"><span class="cross-mark">&#10006;</span> ใช้สารเคมีคลอรีนตกค้าง</td>
+                <td class="cell-std"><span class="cross-mark">&#10006;</span> ไม่มีระบบป้องกันในตัวเครื่อง</td>
+                <td class="cell-aqua highlighted-cell"><span class="check-mark">&#10004;</span> หลอด UV-C LED อัตโนมัติ
+                  24
+                  ชม.</td>
+              </tr>
+              <tr>
+                <td class="cell-label">
+                  <strong>ค่าบำรุงรักษาต่อลิตร</strong>
+                  <small>รวมค่าไส้กรองและน้ำ</small>
+                </td>
+                <td class="cell-tap">~0.10 บาท (ไม่ปลอดภัยต่อการดื่ม)</td>
+                <td class="cell-std">~0.95 บาท/ลิตร</td>
+                <td class="cell-aqua highlighted-cell"><strong>เพียง 0.35 บาท/ลิตร</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
     <!-- ========================================================
          6. INTERACTIVE ECO & SAVINGS CALCULATOR (เครื่องคำนวณความคุ้มค่า)
          - ปรับจำนวนสมาชิกในบ้าน
          - คำนวณเงินที่ประหยัดได้ต่อปี, จำนวนขวดพลาสติกที่ลดได้
          ======================================================== -->
-<section class="calculator-section" id="calculator">
-  <div class="container">
-    <div class="calculator-card">
-      <div class="calc-header text-center">
-        <span class="section-eyebrow">Eco-Friendly & Smart Investment</span>
-        <h2 class="section-title">คำนวณเงินเก็บและความสุขที่คุณจะคืนให้โลก</h2>
-        <p class="section-desc">ลองเลื่อนแถบเพื่อดูว่าเมื่อเปลี่ยนจากน้ำดื่มขวดพลาสติกมาใช้ <span
-            class="text-highlight">MYPRODUCT</span> คุณจะประหยัดได้เท่าไหร่</p>
-      </div>
-
-      <div class="calc-grid">
-        <!-- ส่วนปรับค่าควบคุม (Input Controls) -->
-        <div class="calc-inputs-panel">
-          <div class="input-control-group">
-            <div class="input-label-row">
-              <label for="familyMembersRange">จำนวนสมาชิกในบ้าน (คน):</label>
-              <span class="range-display-val" id="membersDisplay">4 คน</span>
-            </div>
-            <input type="range" id="familyMembersRange" min="1" max="10" value="4" step="1" class="custom-range-slider">
-            <div class="range-scale-labels">
-              <span>1 คน</span>
-              <span>5 คน</span>
-              <span>10 คน</span>
-            </div>
+    <section class="calculator-section" id="calculator">
+      <div class="container">
+        <div class="calculator-card">
+          <div class="calc-header text-center">
+            <span class="section-eyebrow">Eco-Friendly & Smart Investment</span>
+            <h2 class="section-title">คำนวณเงินเก็บและความสุขที่คุณจะคืนให้โลก</h2>
+            <p class="section-desc">ลองเลื่อนแถบเพื่อดูว่าเมื่อเปลี่ยนจากน้ำดื่มขวดพลาสติกมาใช้ <span
+                class="text-highlight">Clean Drop</span> คุณจะประหยัดได้เท่าไหร่</p>
           </div>
 
-          <div class="input-control-group">
-            <div class="input-label-row">
-              <label for="waterIntakeRange">ปริมาณการดื่มเฉลี่ยต่อคนต่อวัน (ลิตร):</label>
-              <span class="range-display-val" id="intakeDisplay">2.0 ลิตร</span>
-            </div>
-            <input type="range" id="waterIntakeRange" min="1.0" max="4.0" value="2.0" step="0.5"
-              class="custom-range-slider">
-            <div class="range-scale-labels">
-              <span>1.0 ล.</span>
-              <span>2.0 ล.</span>
-              <span>4.0 ล.</span>
-            </div>
-          </div>
+          <div class="calc-grid">
+            <!-- ส่วนปรับค่าควบคุม (Input Controls) -->
+            <div class="calc-inputs-panel">
+              <div class="input-control-group">
+                <div class="input-label-row">
+                  <label for="familyMembersRange">จำนวนสมาชิกในบ้าน (คน):</label>
+                  <span class="range-display-val" id="membersDisplay">4 คน</span>
+                </div>
+                <input type="range" id="familyMembersRange" min="1" max="10" value="4" step="1"
+                  class="custom-range-slider">
+                <div class="range-scale-labels">
+                  <span>1 คน</span>
+                  <span>5 คน</span>
+                  <span>10 คน</span>
+                </div>
+              </div>
 
-          <div class="calc-note">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10" />
-              <line x1="12" y1="16" x2="12" y2="12" />
-              <line x1="12" y1="8" x2="12.01" y2="8" />
-            </svg>
-            <span>คำนวณเปรียบเทียบจากค่าน้ำดื่มขวด PET มาตรฐานเฉลี่ยขวดละ 10 บาท (600 มล.)</span>
+              <div class="input-control-group">
+                <div class="input-label-row">
+                  <label for="waterIntakeRange">ปริมาณการดื่มเฉลี่ยต่อคนต่อวัน (ลิตร):</label>
+                  <span class="range-display-val" id="intakeDisplay">2.0 ลิตร</span>
+                </div>
+                <input type="range" id="waterIntakeRange" min="1.0" max="4.0" value="2.0" step="0.5"
+                  class="custom-range-slider">
+                <div class="range-scale-labels">
+                  <span>1.0 ล.</span>
+                  <span>2.0 ล.</span>
+                  <span>4.0 ล.</span>
+                </div>
+              </div>
+
+              <div class="calc-note">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="16" x2="12" y2="12" />
+                  <line x1="12" y1="8" x2="12.01" y2="8" />
+                </svg>
+                <span>คำนวณเปรียบเทียบจากค่าน้ำดื่มขวด PET มาตรฐานเฉลี่ยขวดละ 10 บาท (600 มล.)</span>
+              </div>
+            </div>
+
+            <!-- ส่วนแสดงผลลัพธ์คำนวณ (Results Display Panel) -->
+            <div class="calc-results-panel">
+              <div class="result-box main-savings">
+                <span class="result-label">ประหยัดเงินได้สูงสุดต่อปี:</span>
+                <div class="savings-amount-wrap">
+                  <span class="savings-currency">฿</span>
+                  <span class="savings-number" id="savingsAmount">38,900</span>
+                  <span class="savings-period">/ ปี</span>
+                </div>
+                <span class="result-subtext">คืนทุนค่าเครื่องได้ภายใน 5 - 7 เดือนแรก</span>
+              </div>
+
+              <div class="eco-metrics-row">
+                <!-- ขยะขวดพลาสติกที่ลดได้ -->
+                <div class="eco-metric-card">
+                  <div class="eco-icon-wrap bg-green-light">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M6 3h12l1 6H5l1-6z" />
+                      <path d="M5 9v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9" />
+                    </svg>
+                  </div>
+                  <div class="eco-meta">
+                    <span class="eco-val" id="bottlesReduced">4,867</span>
+                    <span class="eco-text">ลดขวดพลาสติกต่อปี (ขวด)</span>
+                  </div>
+                </div>
+
+                <!-- ปริมาณคาร์บอนฟุตพริ้นท์ที่ลดได้ -->
+                <div class="eco-metric-card">
+                  <div class="eco-icon-wrap bg-blue-light">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                    </svg>
+                  </div>
+                  <div class="eco-meta">
+                    <span class="eco-val" id="co2Reduced">401</span>
+                    <span class="eco-text">ลดการปล่อย CO₂ (กก./ปี)</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
-
-        <!-- ส่วนแสดงผลลัพธ์คำนวณ (Results Display Panel) -->
-        <div class="calc-results-panel">
-          <div class="result-box main-savings">
-            <span class="result-label">ประหยัดเงินได้สูงสุดต่อปี:</span>
-            <div class="savings-amount-wrap">
-              <span class="savings-currency">฿</span>
-              <span class="savings-number" id="savingsAmount">38,900</span>
-              <span class="savings-period">/ ปี</span>
-            </div>
-            <span class="result-subtext">คืนทุนค่าเครื่องได้ภายใน 5 - 7 เดือนแรก</span>
-          </div>
-
-          <div class="eco-metrics-row">
-            <!-- ขยะขวดพลาสติกที่ลดได้ -->
-            <div class="eco-metric-card">
-              <div class="eco-icon-wrap bg-green-light">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M6 3h12l1 6H5l1-6z" />
-                  <path d="M5 9v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9" />
-                </svg>
-              </div>
-              <div class="eco-meta">
-                <span class="eco-val" id="bottlesReduced">4,867</span>
-                <span class="eco-text">ลดขวดพลาสติกต่อปี (ขวด)</span>
-              </div>
-            </div>
-
-            <!-- ปริมาณคาร์บอนฟุตพริ้นท์ที่ลดได้ -->
-            <div class="eco-metric-card">
-              <div class="eco-icon-wrap bg-blue-light">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                </svg>
-              </div>
-              <div class="eco-meta">
-                <span class="eco-val" id="co2Reduced">401</span>
-                <span class="eco-text">ลดการปล่อย CO₂ (กก./ปี)</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
     <!-- ========================================================
          7. SPECIFICATIONS & DIMENSIONS (ข้อมูลจำเพาะเชิงเทคนิค)
          ======================================================== -->
-<section class="specs-section" id="specs">
-  <div class="container">
-    <div class="section-header text-center">
-      <span class="section-eyebrow">ข้อมูลทางเทคนิค</span>
-      <h2 class="section-title">สเปกตัวเครื่อง Clean Drop</h2>
-      <p class="section-desc">รายละเอียดสเปกตัวเครื่อง Clean Drop</p>
-    </div>
-
-    <div class="specs-layout">
-      <!-- ตารางสเปกหลัก -->
-      <div class="specs-card">
-        <h3 class="specs-card-title">รายละเอียด</h3>
-        <ul class="specs-list">
-          <li class="spec-row">
-            <span class="spec-prop">รุ่นสินค้า</span>
-            <span class="spec-desc">Clean Drop</span>
-          </li>
-          <li class="spec-row">
-            <span class="spec-prop">ระบบการกรอง</span>
-            <span class="spec-desc">5-Stage Eco-Mineral Reverse Osmosis + UV-C</span>
-          </li>
-          <li class="spec-row">
-            <span class="spec-prop">ความละเอียดไส้กรอง</span>
-            <span class="spec-desc">0.0001 ไมครอน (ดักจับสารพิษขนาดเล็กกว่าเส้นผม 500,000 เท่า)</span>
-          </li>
-          <li class="spec-row">
-            <span class="spec-prop">อัตราการกรองน้ำ</span>
-            <span class="spec-desc">1.8 ลิตร / นาที (ดื่มสดทันทีโดยไม่ต้องรอพักน้ำ)</span>
-          </li>
-          <li class="spec-row">
-            <span class="spec-prop">กำลังไฟฟ้า / อัตราประหยัด</span>
-            <span class="spec-desc">35W (โหมดสแตนด์บาย < 1.0W) ได้รับฉลากประหยัดไฟเบอร์ 5</span>
-          </li>
-          <li class="spec-row">
-            <span class="spec-prop">ขนาดตัวเครื่อง (ก x ย x ส)</span>
-            <span class="spec-desc">165 x 410 x 380 มม. (บางพิเศษเพียง 16.5 ซม.)</span>
-          </li>
-          <li class="spec-row">
-            <span class="spec-prop">น้ำหนักตัวเครื่อง</span>
-            <span class="spec-desc">8.2 กิโลกรัม</span>
-          </li>
-          <li class="spec-row">
-            <span class="spec-prop">การรับประกัน</span>
-            <span class="spec-desc">-</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- กล่องโปรโมชันพิเศษ / Call to action -->
-      <div class="offer-box">
-        <div class="offer-badge">ข้อเสนอพิเศษประจำเดือน</div>
-        <h3 class="offer-title">ยกระดับน้ำดื่มในบ้านคุณวันนี้</h3>
-        <div class="price-block">
-          <span class="original-price">ปกติ 15,900 บาท</span>
-          <div class="current-price-row">
-            <span class="price-val">0</span>
-            <span class="price-unit">บาท</span>
-          </div>
-          <span class="price-installment">หรือผ่อนสบายๆ 0% นาน 10 เดือน เพียง 1,590 บ./เดือน</span>
+    <section class="specs-section" id="specs">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">ข้อมูลทางเทคนิค</span>
+          <h2 class="section-title">สเปกตัวเครื่อง Clean Drop</h2>
+          <p class="section-desc">รายละเอียดสเปกและมิติของตัวเครื่อง Clean Drop Smart Water Purifier</p>
         </div>
 
-        <ul class="offer-benefits">
-          <li><span class="check-icon-circle">&#10004;</span> ฟรี! บริการจัดส่งและติดตั้งมาตรฐานโดยผู้เชี่ยวชาญ</li>
-          <li><span class="check-icon-circle">&#10004;</span> ฟรี! ชุดไส้กรองสำรองพรีเมียม 1 เซต มูลค่า 3,500 บาท</li>
-          <li><span class="check-icon-circle">&#10004;</span> รับสิทธิ์ตรวจเช็กคุณภาพน้ำฟรีถึงบ้านทุก 6 เดือน</li>
-        </ul>
+        <!-- แบนเนอร์ภาพสินค้า Clean Drop -->
+        <div class="product-showcase-banner">
+          <div class="product-banner-media">
+            <img src="images/clean-drop-product.jpg" alt="เครื่องกรองน้ำอัจฉริยะ Clean Drop Smart Purifier"
+              class="product-banner-img">
+            <div class="product-banner-overlay">
+              <div class="banner-badge">CLEAN DROP SMART PURIFIER</div>
+              <p class="banner-tagline">ดีไซน์มินิมอลโมเดิร์น เรียบหรูทุกมุมมอง ผสานเทคโนโลยี 5-Stage Eco-Mineral RO
+                ดื่มสดสะอาดทุกหยด</p>
+            </div>
+          </div>
+        </div>
 
-        <button class="btn btn-primary btn-block btn-lg" id="orderModalBtn">
-          รับสิทธิ์โปรโมชัน
-        </button>
-        <p class="offer-footer-note">*บริการติดตั้งครอบคลุมทั่วประเทศ ไม่มีค่าใช้จ่ายแอบแฝง</p>
+        <div class="specs-layout">
+          <!-- ตารางสเปกหลัก -->
+          <div class="specs-card">
+            <h3 class="specs-card-title">รายละเอียด</h3>
+            <ul class="specs-list">
+              <li class="spec-row">
+                <span class="spec-prop">รุ่นสินค้า</span>
+                <span class="spec-desc">CD001</span>
+              </li>
+              <li class="spec-row">
+                <span class="spec-prop">ระบบการกรอง</span>
+                <span class="spec-desc">5-Stage Eco-Mineral Reverse Osmosis + UV-C</span>
+              </li>
+              <li class="spec-row">
+                <span class="spec-prop">ความละเอียดไส้กรอง</span>
+                <span class="spec-desc">0.0001 ไมครอน (ดักจับสารพิษขนาดเล็กกว่าเส้นผม 500,000 เท่า)</span>
+              </li>
+              <li class="spec-row">
+                <span class="spec-prop">อัตราการกรองน้ำ</span>
+                <span class="spec-desc">1.8 ลิตร / นาที (ดื่มสดทันทีโดยไม่ต้องรอพักน้ำ)</span>
+              </li>
+              <li class="spec-row">
+                <span class="spec-prop">กำลังไฟฟ้า / อัตราประหยัด</span>
+                <span class="spec-desc">35W (โหมดสแตนด์บาย < 1.0W) ได้รับฉลากประหยัดไฟเบอร์ 5</span>
+              </li>
+              <li class="spec-row">
+                <span class="spec-prop">ขนาดตัวเครื่อง (ก x ย x ส)</span>
+                <span class="spec-desc">165 x 410 x 380 มม. (บางพิเศษเพียง 16.5 ซม.)</span>
+              </li>
+              <li class="spec-row">
+                <span class="spec-prop">น้ำหนักตัวเครื่อง</span>
+                <span class="spec-desc">8.2 กิโลกรัม</span>
+              </li>
+              <li class="spec-row">
+                <span class="spec-prop">การรับประกัน</span>
+                <span class="spec-desc">-</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- กล่องโปรโมชันพิเศษ / Call to action -->
+          <div class="offer-box">
+            <div class="offer-badge">ข้อเสนอพิเศษลูกค้าใหม่</div>
+            <h3 class="offer-title">ยกระดับน้ำดื่มในบ้านคุณวันนี้</h3>
+            <div class="price-block">
+              <span class="original-price">ปกติ 29,990 บาท</span>
+              <div class="current-price-row">
+                <span class="price-val">23,900</span>
+                <span class="price-unit">บาท</span>
+              </div>
+              <span class="price-installment">หรือผ่อนสบายๆ 0% นาน 10 เดือน เพียง 2,390 บ./เดือน</span>
+            </div>
+
+            <ul class="offer-benefits">
+              <li><span class="check-icon-circle">&#10004;</span> ฟรี! บริการจัดส่งและติดตั้งมาตรฐานโดยผู้เชี่ยวชาญ</li>
+              <li><span class="check-icon-circle">&#10004;</span> ฟรี! ชุดไส้กรองสำรองพรีเมียม 1 เซต มูลค่า 3,500 บาท
+              </li>
+              <li><span class="check-icon-circle">&#10004;</span> รับสิทธิ์ตรวจเช็กคุณภาพน้ำฟรีถึงบ้านทุก 6 เดือน</li>
+            </ul>
+
+            <button class="btn btn-primary btn-block btn-lg" id="orderModalBtn">
+              รับสิทธิ์โปรโมชัน
+            </button>
+            <p class="offer-footer-note">*บริการติดตั้งครอบคลุมทั่วประเทศ ไม่มีค่าใช้จ่ายแอบแฝง</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
     <!-- ========================================================
          8. FAQ (คำถามที่พบบ่อย)
          ======================================================== -->
-<section class="faq-section" id="faq">
-  <div class="container">
-    <div class="section-header text-center">
-      <span class="section-eyebrow">คำถามที่พบบ่อย</span>
-      <h2 class="section-title">ข้อสงสัยยอดฮิตเกี่ยวกับเครื่องกรองน้ำ</h2>
-    </div>
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">คำถามที่พบบ่อย</span>
+          <h2 class="section-title">ข้อสงสัยยอดฮิตเกี่ยวกับเครื่องกรองน้ำ</h2>
+        </div>
 
-    <div class="faq-accordion" id="faqAccordion">
-      <!-- คำถาม 1 -->
-      <div class="faq-item active">
-        <button class="faq-question-btn" aria-expanded="true">
-          <span>น้ำที่ผ่านการกรอง RO ยังมีแร่ธาตุหลงเหลืออยู่ไหม?</span>
-          <span class="faq-toggle-icon">+</span>
-        </button>
-        <div class="faq-answer-panel">
-          <p>เครื่องกรอง RO ทั่วไปจะกรองแร่ธาตุออกจนหมด แต่นวัตกรรมของ <strong>Clean Drop</strong> ได้เพิ่มขั้นตอน
-            <strong>Stage 4: Mineral Booster</strong> ซึ่งจะเติมแร่ธาตุธรรมชาติ เช่น แคลเซียม แมกนีเซียม
-            และไอออนที่เป็นประโยชน์กลับเข้าไปในสัดส่วนที่สมดุล ทำให้น้ำมีรสชาตินุ่ม อร่อย และมีค่า pH
-            ที่เหมาะสมต่อร่างกาย</p>
+        <div class="faq-accordion" id="faqAccordion">
+          <!-- คำถาม 1 -->
+          <div class="faq-item active">
+            <button class="faq-question-btn" aria-expanded="true">
+              <span>น้ำที่ผ่านการกรอง RO ยังมีแร่ธาตุหลงเหลืออยู่ไหม?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p>เครื่องกรอง RO ทั่วไปจะกรองแร่ธาตุออกจนหมด แต่นวัตกรรมของ <strong>Clean Drop</strong> ได้เพิ่มขั้นตอน
+                <strong>Stage 4: Mineral Booster</strong> ซึ่งจะเติมแร่ธาตุธรรมชาติ เช่น แคลเซียม แมกนีเซียม
+                และไอออนที่เป็นประโยชน์กลับเข้าไปในสัดส่วนที่สมดุล ทำให้น้ำมีรสชาตินุ่ม อร่อย และมีค่า pH
+                ที่เหมาะสมต่อร่างกาย
+              </p>
+            </div>
+          </div>
+
+          <!-- คำถาม 2 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>การเปลี่ยนไส้กรองยุ่งยากไหม ต้องใช้เครื่องมือพิเศษหรือไม่?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p>ไม่ยุ่งยากเลยครับ ระบบตัวกรองเป็นแบบ <strong>Quick-Twist</strong> สามารถใช้มือหมุนปลดล็อก 90
+                องศาแล้วดึงออกได้ในเวลาเพียง 3 วินาที ตัวเครื่องมีวาล์วตัดน้ำอัตโนมัติ น้ำจะไม่ไหลหกเลอะเทอะ
+                ไม่จำเป็นต้องปิดวาล์วน้ำหลักของบ้าน</p>
+            </div>
+          </div>
+
+          <!-- คำถาม 3 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>เครื่องรุ่นนี้เหมาะสำหรับคอนโดมิเนียมหรือไม่?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p>เหมาะมากครับ ตัวเครื่องมีความหนาเพียง 16.5 เซนติเมตร สามารถวางบนเคาน์เตอร์ครัว
+                หรือซ่อนไว้ใต้ซิงค์ล้างจานได้อย่างกลมกลืน อีกทั้งมอเตอร์ปั๊มทำงานเงียบสนิท (ต่ำกว่า 35 เดซิเบล)
+                ไม่รบกวนการอยู่อาศัย</p>
+            </div>
+          </div>
+
+          <!-- คำถาม 4 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>หากน้ำประปาที่บ้านมีปัญหาบ่อย เช่น น้ำกร่อย จะใช้งานได้หรือไม่?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p>เยื่อกรอง RO Membrane ขนาด 0.0001 ไมครอน สามารถกรองเกลือแร่ส่วนเกิน ความกร่อย
+                และสารละลายเจือปนในน้ำประปาได้อย่างมีประสิทธิภาพสูง ได้น้ำดื่มบริสุทธิ์สะอาดมั่นใจได้ 100%</p>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+  </main>
 
-      <!-- คำถาม 2 -->
-      <div class="faq-item">
-        <button class="faq-question-btn" aria-expanded="false">
-          <span>การเปลี่ยนไส้กรองยุ่งยากไหม ต้องใช้เครื่องมือพิเศษหรือไม่?</span>
-          <span class="faq-toggle-icon">+</span>
-        </button>
-        <div class="faq-answer-panel">
-          <p>ไม่ยุ่งยากเลยครับ ระบบตัวกรองเป็นแบบ <strong>Quick-Twist</strong> สามารถใช้มือหมุนปลดล็อก 90
-            องศาแล้วดึงออกได้ในเวลาเพียง 3 วินาที ตัวเครื่องมีวาล์วตัดน้ำอัตโนมัติ น้ำจะไม่ไหลหกเลอะเทอะ
-            ไม่จำเป็นต้องปิดวาล์วน้ำหลักของบ้าน</p>
+  <!-- ========================================================
+     9. PROMOTION ORDER MODAL (หน้าต่างรับสิทธิ์โปรโมชัน)
+     ======================================================== -->
+  <div class="modal-backdrop" id="demoModal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="ปิดหน้าต่าง">&times;</button>
+
+      <!-- หัวข้อ Modal -->
+      <div class="modal-header">
+        <div class="modal-icon-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4" />
+            <path d="M4 6v12c0 1.1.9 2 2 2h14v-4" />
+            <circle cx="18" cy="12" r="2" />
+          </svg>
         </div>
+        <h3 class="modal-title" id="modalTitle">ลงทะเบียนรับสิทธิ์โปรโมชัน</h3>
+        <p class="modal-subtitle">รับสิทธิ์ราคาพิเศษ 23,900.- (จาก 29,990.-) ฟรีค่าติดตั้งและเซตไส้กรอง</p>
       </div>
 
-      <!-- คำถาม 3 -->
-      <div class="faq-item">
-        <button class="faq-question-btn" aria-expanded="false">
-          <span>เครื่องรุ่นนี้เหมาะสำหรับคอนโดมิเนียมหรือไม่?</span>
-          <span class="faq-toggle-icon">+</span>
-        </button>
-        <div class="faq-answer-panel">
-          <p>เหมาะมากครับ ตัวเครื่องมีความหนาเพียง 16.5 เซนติเมตร สามารถวางบนเคาน์เตอร์ครัว
-            หรือซ่อนไว้ใต้ซิงค์ล้างจานได้อย่างกลมกลืน อีกทั้งมอเตอร์ปั๊มทำงานเงียบสนิท (ต่ำกว่า 35 เดซิเบล)
-            ไม่รบกวนการอยู่อาศัย</p>
+      <!-- แบบฟอร์มกรอกข้อมูล -->
+      <form class="modal-form" id="bookingForm">
+        <div class="form-group">
+          <label for="userName">ชื่อ - นามสกุล <span style="color: #ef4444;">*</span></label>
+          <input type="text" id="userName" class="form-input" placeholder="เช่น สมชาย ใจดี" required>
         </div>
-      </div>
 
-      <!-- คำถาม 4 -->
-      <div class="faq-item">
-        <button class="faq-question-btn" aria-expanded="false">
-          <span>หากน้ำประปาที่บ้านมีปัญหาบ่อย เช่น น้ำกร่อย จะใช้งานได้หรือไม่?</span>
-          <span class="faq-toggle-icon">+</span>
-        </button>
-        <div class="faq-answer-panel">
-          <p>เยื่อกรอง RO Membrane ขนาด 0.0001 ไมครอน สามารถกรองเกลือแร่ส่วนเกิน ความกร่อย
-            และสารละลายเจือปนในน้ำประปาได้อย่างมีประสิทธิภาพสูง ได้น้ำดื่มบริสุทธิ์สะอาดมั่นใจได้ 100%</p>
+        <div class="form-group">
+          <label for="userPhone">เบอร์โทรศัพท์ <span style="color: #ef4444;">*</span></label>
+          <input type="tel" id="userPhone" class="form-input" placeholder="เช่น 081-234-5678" required>
         </div>
+
+        <div class="form-group">
+          <label for="userLine">Line ID (สำหรับส่งเอกสารและนัดหมาย)</label>
+          <input type="text" id="userLine" class="form-input" placeholder="เช่น @lineid หรือเบอร์โทร">
+        </div>
+
+        <div class="form-group">
+          <label for="userProvince">จังหวัด / พื้นที่ติดตั้ง <span style="color: #ef4444;">*</span></label>
+          <select id="userProvince" class="form-select" required>
+            <option value="">-- กรุณาเลือกจังหวัด --</option>
+            <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+            <option value="นนทบุรี">นนทบุรี</option>
+            <option value="ปทุมธานี">ปทุมธานี</option>
+            <option value="สมุทรปราการ">สมุทรปราการ</option>
+            <option value="ชลบุรี">ชลบุรี</option>
+            <option value="เชียงใหม่">เชียงใหม่</option>
+            <option value="นครราชสีมา">นครราชสีมา</option>
+            <option value="ขอนแก่น">ขอนแก่น</option>
+            <option value="สงขลา">สงขลา</option>
+            <option value="ภูเก็ต">ภูเก็ต</option>
+            <option value="จังหวัดอื่นๆ">จังหวัดอื่นๆ (ทั่วประเทศ)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="userAddress">ที่อยู่จัดส่ง / ติดตั้งเพิ่มเติม</label>
+          <input type="text" id="userAddress" class="form-input"
+            placeholder="บ้านเลขที่, ซอย, ถนน, อำเภอ (ระบุหรือไม่ก็ได้)">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 10px;">
+          ยืนยันลงทะเบียนรับสิทธิ์
+        </button>
+        <p style="font-size: 0.76rem; color: var(--color-text-light); text-align: center; margin-top: 6px;">
+          *เจ้าหน้าที่จะติดต่อกลับเพื่อยืนยันวันติดตั้งและเงื่อนไขโปรโมชันภายใน 24 ชม.
+        </p>
+      </form>
+
+      <!-- กล่องแสดงผลเมื่อส่งข้อมูลสำเร็จ -->
+      <div class="form-success-box" id="formSuccessMessage" style="display: none;">
+        <div class="success-icon">&#10004;</div>
+        <h4>ลงทะเบียนรับสิทธิ์สำเร็จ!</h4>
+        <p>ระบบบันทึกข้อมูลของคุณเรียบร้อยแล้ว เจ้าหน้าที่ฝ่ายบริการ Clean Drop
+          จะติดต่อกลับเพื่อประสานงานการติดตั้งโดยเร็วที่สุด</p>
+        <button type="button" class="btn btn-primary btn-block" id="closeSuccessBtn">
+          รับทราบและปิดหน้าต่าง
+        </button>
       </div>
     </div>
   </div>
-</section>
-  </main>
 
-  <!-- Missing include: sections/modal.html -->
   <!-- ========================================================
        10. FOOTER (ส่วนท้ายเว็บไซต์)
        ======================================================== -->
-<footer class="site-footer">
-  <div class="container footer-container">
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <span class="logo-title">CLEAN</span>
-        <span class="logo-subtitle">DROP</span>
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-title">CLEAN</span>
+          <span class="logo-subtitle">DROP</span>
+        </div>
+        <p class="footer-tagline">ส่งมอบน้ำดื่มสะอาด บริสุทธิ์ และเปี่ยมแร่ธาตุธรรมชาติ
+          เพื่อสุขภาพที่ดีของทุกครอบครัวไทย
+        </p>
+        <div class="certifications-badges">
+          <span class="cert-pill">NSF Standard 42/58</span>
+          <span class="cert-pill">WQA Gold Seal</span>
+          <span class="cert-pill">BPA-Free 100%</span>
+        </div>
       </div>
-      <p class="footer-tagline">ส่งมอบน้ำดื่มสะอาด บริสุทธิ์ และเปี่ยมแร่ธาตุธรรมชาติ เพื่อสุขภาพที่ดีของทุกครอบครัวไทย
-      </p>
-      <div class="certifications-badges">
-        <span class="cert-pill">NSF Standard 42/58</span>
-        <span class="cert-pill">WQA Gold Seal</span>
-        <span class="cert-pill">BPA-Free 100%</span>
+
+      <div class="footer-links-group">
+        <h4 class="footer-heading">เมนูด่วน</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">หน้าแรก</a></li>
+          <li><a href="#features">จุดเด่นเครื่องกรองน้ำ</a></li>
+          <li><a href="#filter-journey">ขั้นตอนการกรอง 5 ชั้น</a></li>
+          <li><a href="#comparison">เปรียบเทียบคุณภาพน้ำ</a></li>
+          <li><a href="#calculator">คำนวณเงินที่ประหยัดได้</a></li>
+        </ul>
       </div>
-    </div>
 
-    <div class="footer-links-group">
-      <h4 class="footer-heading">เมนูด่วน</h4>
-      <ul class="footer-links">
-        <li><a href="#hero">หน้าแรก</a></li>
-        <li><a href="#features">จุดเด่นเครื่องกรองน้ำ</a></li>
-        <li><a href="#filter-journey">ขั้นตอนการกรอง 5 ชั้น</a></li>
-        <li><a href="#comparison">เปรียบเทียบคุณภาพน้ำ</a></li>
-        <li><a href="#calculator">คำนวณเงินที่ประหยัดได้</a></li>
-      </ul>
-    </div>
+      <div class="footer-links-group">
+        <h4 class="footer-heading">บริการลูกค้า</h4>
+        <ul class="footer-links">
+          <li><a href="#faq">คำถามที่พบบ่อย (FAQ)</a></li>
+          <li><a href="#specs">ดาวน์โหลดคู่มือการใช้งาน</a></li>
+          <li><a href="#demoModal" class="open-modal-link">ลงทะเบียนรับโปรโมชัน</a></li>
+          <li><a href="#">นโยบายการรับประกัน 5 ปี</a></li>
+        </ul>
+      </div>
 
-    <div class="footer-links-group">
-      <h4 class="footer-heading">บริการลูกค้า</h4>
-      <ul class="footer-links">
-        <li><a href="#faq">คำถามที่พบบ่อย (FAQ)</a></li>
-        <li><a href="#specs">ดาวน์โหลดคู่มือการใช้งาน</a></li>
-        <li><a href="#demoModal" class="open-modal-link">ขอรับการตรวจน้ำฟรี</a></li>
-        <li><a href="#">นโยบายการรับประกัน 5 ปี</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-links-group">
-      <h4 class="footer-heading">ติดต่อเรา</h4>
-      <p class="footer-contact-item">
-        <strong>โทร:</strong> -
-      </p>
-      <p class="footer-contact-item">
-        <strong>Line Official:</strong> @-
-      </p>
-      <p class="footer-contact-item">
-        <strong>ศูนย์บริการ:</strong> -
-      </p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div class="container footer-bottom-container">
-      <p>&copy; 2026 Clean Drop. สงวนลิขสิทธิ์ทั้งหมด</p>
-      <div class="footer-status-pill">
-        <span class="status-indicator"></span>
-        <span>ระบบตรวจวัดคุณภาพออนไลน์พร้อมทำงาน</span>
+      <div class="footer-links-group">
+        <h4 class="footer-heading">ติดต่อเรา</h4>
+        <p class="footer-contact-item">
+          <strong>โทร:</strong> -
+        </p>
+        <p class="footer-contact-item">
+          <strong>Line Official:</strong> @-
+        </p>
+        <p class="footer-contact-item">
+          <strong>ศูนย์บริการ:</strong> -
+        </p>
       </div>
     </div>
-  </div>
-</footer>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; 2026 Clean Drop. สงวนลิขสิทธิ์ทั้งหมด</p>
+        <div class="footer-status-pill">
+          <span class="status-indicator"></span>
+          <span>ระบบตรวจวัดคุณภาพออนไลน์พร้อมทำงาน</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- เชื่อมโยงไฟล์สคริปต์ JavaScript -->
   <script src="script.js"></script>

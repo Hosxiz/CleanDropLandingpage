@@ -1,0 +1,79 @@
+<!-- ========================================================
+     9. PROMOTION ORDER MODAL (หน้าต่างรับสิทธิ์โปรโมชัน)
+     ======================================================== -->
+<div class="modal-backdrop" id="demoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-dialog">
+    <button class="modal-close-btn" id="closeModalBtn" aria-label="ปิดหน้าต่าง">&times;</button>
+
+    <!-- หัวข้อ Modal -->
+    <div class="modal-header">
+      <div class="modal-icon-badge">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/>
+          <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/>
+          <circle cx="18" cy="12" r="2"/>
+        </svg>
+      </div>
+      <h3 class="modal-title" id="modalTitle">ลงทะเบียนรับสิทธิ์โปรโมชัน</h3>
+      <p class="modal-subtitle">รับสิทธิ์ราคาพิเศษ 23,900.- (จาก 29,990.-) ฟรีค่าติดตั้งและเซตไส้กรอง</p>
+    </div>
+
+    <!-- แบบฟอร์มกรอกข้อมูล -->
+    <form class="modal-form" id="bookingForm">
+      <div class="form-group">
+        <label for="userName">ชื่อ - นามสกุล <span style="color: #ef4444;">*</span></label>
+        <input type="text" id="userName" class="form-input" placeholder="เช่น สมชาย ใจดี" required>
+      </div>
+
+      <div class="form-group">
+        <label for="userPhone">เบอร์โทรศัพท์ <span style="color: #ef4444;">*</span></label>
+        <input type="tel" id="userPhone" class="form-input" placeholder="เช่น 081-234-5678" required>
+      </div>
+
+      <div class="form-group">
+        <label for="userLine">Line ID (สำหรับส่งเอกสารและนัดหมาย)</label>
+        <input type="text" id="userLine" class="form-input" placeholder="เช่น @lineid หรือเบอร์โทร">
+      </div>
+
+      <div class="form-group">
+        <label for="userProvince">จังหวัด / พื้นที่ติดตั้ง <span style="color: #ef4444;">*</span></label>
+        <select id="userProvince" class="form-select" required>
+          <option value="">-- กรุณาเลือกจังหวัด --</option>
+          <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+          <option value="นนทบุรี">นนทบุรี</option>
+          <option value="ปทุมธานี">ปทุมธานี</option>
+          <option value="สมุทรปราการ">สมุทรปราการ</option>
+          <option value="ชลบุรี">ชลบุรี</option>
+          <option value="เชียงใหม่">เชียงใหม่</option>
+          <option value="นครราชสีมา">นครราชสีมา</option>
+          <option value="ขอนแก่น">ขอนแก่น</option>
+          <option value="สงขลา">สงขลา</option>
+          <option value="ภูเก็ต">ภูเก็ต</option>
+          <option value="จังหวัดอื่นๆ">จังหวัดอื่นๆ (ทั่วประเทศ)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="userAddress">ที่อยู่จัดส่ง / ติดตั้งเพิ่มเติม</label>
+        <input type="text" id="userAddress" class="form-input" placeholder="บ้านเลขที่, ซอย, ถนน, อำเภอ (ระบุหรือไม่ก็ได้)">
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 10px;">
+        ยืนยันลงทะเบียนรับสิทธิ์
+      </button>
+      <p style="font-size: 0.76rem; color: var(--color-text-light); text-align: center; margin-top: 6px;">
+        *เจ้าหน้าที่จะติดต่อกลับเพื่อยืนยันวันติดตั้งและเงื่อนไขโปรโมชันภายใน 24 ชม.
+      </p>
+    </form>
+
+    <!-- กล่องแสดงผลเมื่อส่งข้อมูลสำเร็จ -->
+    <div class="form-success-box" id="formSuccessMessage" style="display: none;">
+      <div class="success-icon">&#10004;</div>
+      <h4>ลงทะเบียนรับสิทธิ์สำเร็จ!</h4>
+      <p>ระบบบันทึกข้อมูลของคุณเรียบร้อยแล้ว เจ้าหน้าที่ฝ่ายบริการ Clean Drop จะติดต่อกลับเพื่อประสานงานการติดตั้งโดยเร็วที่สุด</p>
+      <button type="button" class="btn btn-primary btn-block" id="closeSuccessBtn">
+        รับทราบและปิดหน้าต่าง
+      </button>
+    </div>
+  </div>
+</div>

@@ -309,9 +309,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ปุ่มเปิด/ปิดเมนูหลักบนหน้าจอมือถือ (Hamburger Button)
-  if (mobileToggle) {
-    mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
+  if (mobileToggle && navMenu) {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navMenu.classList.toggle('open');
+      mobileToggle.classList.toggle('active', isOpen);
+      mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // ปิดเมนูเมื่อคลิกนอกพื้นที่ Navbar
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navMenu.classList.remove('open');
+        mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 
@@ -332,8 +344,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // เมื่อคลิกลิงก์ปลายทาง ให้ปิดเมนูมือถืออัตโนมัติ
   allNavLinks.forEach(link => {
     link.addEventListener('click', () => {
-      if (navMenu.classList.contains('open')) {
+      if (navMenu && navMenu.classList.contains('open')) {
         navMenu.classList.remove('open');
+        if (mobileToggle) {
+          mobileToggle.classList.remove('active');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        }
       }
       // ปิด dropdown-open ทั้งหมดบนมือถือ
       document.querySelectorAll('.nav-item.dropdown-open').forEach(item => {
@@ -344,10 +360,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ------------------------------------------------------------------------
-  // 6. BOOKING & DEMO MODAL POPUP (การเปิด-ปิดหน้าต่างนัดตรวจน้ำฟรี)
+  // 6. PROMOTION REGISTRATION MODAL POPUP (การเปิด-ปิดหน้าต่างรับสิทธิ์โปรโมชัน)
   // ------------------------------------------------------------------------
   const demoModal = document.getElementById('demoModal');
-  const openDemoBtn = document.getElementById('openDemoBtn');
   const orderModalBtn = document.getElementById('orderModalBtn');
   const closeModalBtn = document.getElementById('closeModalBtn');
   const bookingForm = document.getElementById('bookingForm');
@@ -356,18 +371,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalLinks = document.querySelectorAll('.open-modal-link');
 
   function openModal() {
+    if (!demoModal) return;
+    if (bookingForm) bookingForm.style.display = 'flex';
+    if (formSuccessMessage) formSuccessMessage.style.display = 'none';
     demoModal.classList.add('open');
     demoModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden'; // ป้องกันการเลื่อนหน้าเว็บข้างหลัง
   }
 
   function closeModal() {
+    if (!demoModal) return;
     demoModal.classList.remove('open');
     demoModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = ''; // คืนค่าการเลื่อนหน้าเว็บตามปกติ
+    setTimeout(() => {
+      if (bookingForm) bookingForm.style.display = 'flex';
+      if (formSuccessMessage) formSuccessMessage.style.display = 'none';
+    }, 250);
   }
 
-  if (openDemoBtn) openDemoBtn.addEventListener('click', openModal);
   if (orderModalBtn) orderModalBtn.addEventListener('click', openModal);
   if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
   if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', closeModal);
@@ -380,32 +402,40 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ปิด Modal เมื่อคลิกที่พื้นหลังสีเทาด้านนอกตัวกล่อง
-  demoModal.addEventListener('click', (e) => {
-    if (e.target === demoModal) {
-      closeModal();
-    }
-  });
+  if (demoModal) {
+    demoModal.addEventListener('click', (e) => {
+      if (e.target === demoModal) {
+        closeModal();
+      }
+    });
+  }
 
   // จัดการการส่งแบบฟอร์ม (Form Submit Event)
-  bookingForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // ป้องกันการรีเฟรชหน้าเว็บ
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault(); // ป้องกันการรีเฟรชหน้าเว็บ
 
-    const userName = document.getElementById('userName').value.trim();
-    const userPhone = document.getElementById('userPhone').value.trim();
-    const userProvince = document.getElementById('userProvince').value;
+      const userName = document.getElementById('userName') ? document.getElementById('userName').value.trim() : '';
+      const userPhone = document.getElementById('userPhone') ? document.getElementById('userPhone').value.trim() : '';
+      const userProvince = document.getElementById('userProvince') ? document.getElementById('userProvince').value : '';
 
-    // การตรวจสอบข้อมูลเบื้องต้น (Validation)
-    if (!userName || !userPhone || !userProvince) {
-      alert('กรุณากรอกข้อมูลให้ครบถ้วน');
-      return;
-    }
+      // การตรวจสอบข้อมูลเบื้องต้น (Validation)
+      if (!userName || !userPhone || !userProvince) {
+        alert('กรุณากรอกข้อมูลที่จำเป็นให้ครบถ้วน (ชื่อ, เบอร์โทรศัพท์, จังหวัด)');
+        return;
+      }
 
-    // จำลองการส่งข้อมูลสำเร็จ
-    bookingForm.style.display = 'none';
-    formSuccessMessage.style.display = 'block';
+      // จำลองการส่งข้อมูลสำเร็จ (แสดงหน้า Success Screen)
+      bookingForm.style.display = 'none';
+      if (formSuccessMessage) {
+        formSuccessMessage.style.display = 'block';
+      }
 
-    // เคลียร์ค่าฟอร์มสำหรับครั้งถัดไป
-    bookingForm.reset();
-  });
+      // เคลียร์ค่าฟอร์มสำหรับครั้งถัดไป
+      bookingForm.reset();
+    });
+  }
+
+
 
 });
